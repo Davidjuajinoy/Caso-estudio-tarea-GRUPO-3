@@ -1,0 +1,4 @@
+Se crea usando el Framework Spring Boot [JAVA]
+Carpeta backend contiene 2 carpetas las cuales son controllers y entity
+[dentro modelDao,modalDto ,Services].
+Frontend se divide en css , img ,js ,app ,index.
