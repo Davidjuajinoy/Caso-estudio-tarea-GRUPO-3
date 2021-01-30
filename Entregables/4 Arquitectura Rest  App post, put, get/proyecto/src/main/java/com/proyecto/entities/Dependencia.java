@@ -1,19 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package com.proyecto.entities;
 
-package com.api.entities;
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table( name = "DEPENDENCIA")
+
+public class Dependencia  implements Serializable {
 
 
-
-/**
- *
- * @author David Juajinoy
- */
-
-public class Dependencia {
+    private static final long serialVersionUID = -6362794385792247263L;
     private int id;
     private String codigo;
     private String descripcion;
@@ -31,7 +33,9 @@ public class Dependencia {
 	this.estado = estado;
     }
 
-    
+    @Id
+    @GeneratedValue( strategy = GenerationType.IDENTITY )
+    @Column( name = "ID_ROL_PK", nullable = false )
     public int getId() {
 	return id;
     }
@@ -40,6 +44,7 @@ public class Dependencia {
 	this.id = id;
     }
 
+    @Column(name = "CODIGO")
     public String getCodigo() {
 	return codigo;
     }
@@ -48,6 +53,7 @@ public class Dependencia {
 	this.codigo = codigo;
     }
 
+    @Column(name = "DESCRIPCION")
     public String getDescripcion() {
 	return descripcion;
     }
@@ -55,7 +61,8 @@ public class Dependencia {
     public void setDescripcion(String descripcion) {
 	this.descripcion = descripcion;
     }
-
+    
+    @Column(name = "CARGO")
     public String getCargo() {
 	return cargo;
     }
@@ -64,7 +71,8 @@ public class Dependencia {
 	this.cargo = cargo;
     }
 
-    public boolean getEstado() {
+    @Column(name = "ESTADO")
+    public boolean isEstado() {
 	return estado;
     }
 
@@ -76,13 +84,5 @@ public class Dependencia {
     public String toString() {
 	return "Dependencia{" + "id=" + id + ", codigo=" + codigo + ", descripcion=" + descripcion + ", cargo=" + cargo + ", estado=" + estado + '}';
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

@@ -1,10 +1,10 @@
-package com.api.crud;
+package com.proyecto.menu;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RestApplicationTests {
+class ProyectoApplicationTests {
 
 	@Test
 	void contextLoads() {
