@@ -9,22 +9,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.proyecto.entities.Usuario;
 import com.proyecto.services.IUsuarioServices;
+import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/usuarios")
 public class UsuarioRestController {
     @Autowired
     private IUsuarioServices usuarioService;
 
-    @GetMapping("/usuario")
+    @GetMapping("")
     public List<Usuario> index() {
 	return usuarioService.findAll();
     }
 
-    @PostMapping("/usuario")
+    @PostMapping("")
     public Usuario create(@RequestBody Usuario usuario) {
 	return usuarioService.create(usuario);
     }
+    
+    @PutMapping("")
+    public Usuario update(@RequestBody Usuario usuario) {
+    	return usuarioService.update(usuario);
+    }
+    
+    
 }
 
 

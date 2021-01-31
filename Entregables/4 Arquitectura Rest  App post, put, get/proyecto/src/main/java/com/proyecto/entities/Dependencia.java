@@ -33,9 +33,9 @@ public class Dependencia  implements Serializable {
 	this.estado = estado;
     }
 
-    @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY )
-    @Column( name = "ID_ROL_PK", nullable = false )
+    @Id 
+    @GeneratedValue( strategy = GenerationType.IDENTITY ) 
+    @Column( name = "ID_DEPENDENCIA", nullable = false ) 
     public int getId() {
 	return id;
     }

@@ -23,5 +23,13 @@ public class ClienteServices implements IUsuarioServices {
 	System.out.println(usuario.getDependencia());
 	return clienteDao.save(usuario);
     }
+    
+    
+	@Transactional(readOnly = false)
+	public Usuario update(Usuario usuario){
+		return clienteDao.save(usuario);
+	}
+	
+	
 }
 
