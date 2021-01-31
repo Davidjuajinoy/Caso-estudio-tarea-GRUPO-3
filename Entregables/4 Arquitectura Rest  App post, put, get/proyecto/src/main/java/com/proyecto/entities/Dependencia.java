@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Dependencia  implements Serializable {
 
 
-    private static final long serialVersionUID = -6362794385792247263L;
+    private static final long serialVersionUID = 22L;
     private int id;
     private String codigo;
     private String descripcion;

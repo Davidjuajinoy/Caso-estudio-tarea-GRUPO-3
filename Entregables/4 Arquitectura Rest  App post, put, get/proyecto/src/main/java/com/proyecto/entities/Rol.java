@@ -16,7 +16,7 @@ import javax.persistence.Table;
 
 public class Rol implements Serializable {
 
-    private static final long serialVersionUID = -6362794385792247263L;
+    private static final long serialVersionUID = 146584L;
     private int id;
     private String descripcion;
     private String siglaRol;
@@ -25,12 +25,7 @@ public class Rol implements Serializable {
     public Rol() {
     }
 
-    public Rol(int id, String descripcion, String siglaRol, boolean estado) {
-	this.id = id;
-	this.descripcion = descripcion;
-	this.siglaRol = siglaRol;
-	this.estado = estado;
-    }
+   
 
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
