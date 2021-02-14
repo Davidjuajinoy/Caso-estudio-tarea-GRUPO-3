@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 import javax.persistence.Table;
 
 /**
@@ -33,6 +34,11 @@ public class Producto implements Serializable {
     private String nombre;
     @Column(name = "PRECIO", nullable = false)
     private Double precio;
+    
+    
+    @Column(name = "Categoria_fk")
+    private Long categoria_fk;
+    
 
     public Producto() {
     }
@@ -60,11 +66,24 @@ public class Producto implements Serializable {
     public void setPrecio(Double precio) {
 	this.precio = precio;
     }
+    
+    
 
-    @Override
-    public String toString() {
-	return "Producto{" + "id=" + id + ", nombre=" + nombre + ", precio=" + precio + '}';
-    }
+    public Long getCategoria_fk() {
+		return categoria_fk;
+	}
+
+	public void setCategoria_fk(Long categoria_fk) {
+		this.categoria_fk = categoria_fk;
+	}
+
+	@Override
+	public String toString() {
+		return "Producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", categoria_fk=" + categoria_fk
+				+ "]";
+	}
+
+
     
     
 

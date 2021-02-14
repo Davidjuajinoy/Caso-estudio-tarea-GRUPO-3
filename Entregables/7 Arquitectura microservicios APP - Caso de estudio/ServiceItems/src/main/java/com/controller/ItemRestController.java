@@ -7,9 +7,11 @@
 package com.controller;
 
 
-import com.implementacion.ServicesItem;
-import com.implementacion.ServicesItemFeign;
+
 import com.models.Items;
+import com.services.IServicesItem;
+import com.services.ServicesItem;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,12 +32,13 @@ public class ItemRestController {
 
     @GetMapping("")
     public List<Items> listar() {
-	return servicesItem.findAll();
+    	System.out.println("XdDDD");
+    	return servicesItem.findAll();
     }
 
-    @GetMapping("/{id}/cantidad/{cantidad}")
-    public Items detalle(@PathVariable Long id, @PathVariable Integer cantidad) {
-	return servicesItem.findById(id,cantidad);
+    @GetMapping("/{id}/categoria")
+    public Items detalle(@PathVariable Long id) {
+	return servicesItem.findById(id);
     }
 
 }

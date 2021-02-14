@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 
-package com.implementacion;
+package com.services;
 
 import com.clientes.ProductoClienteRest;
 import com.models.Items;
-import com.services.IServicesItem;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,11 +27,14 @@ public class ServicesItemFeign implements IServicesItem {
     private ProductoClienteRest clienteFeing;
     
     public List<Items> findAll() {
-	return clienteFeing.listar().stream().map(p -> new Items(p, 1)).collect(Collectors.toList());
+    System.out.println("llega hasta aca");
+	//return clienteFeing.listar().stream().map(p -> new Items(p, 1)).collect(Collectors.toList());
+    	return null;
     }
 
-    public Items findById(Long id, Integer cantidad) {
-	return new Items(clienteFeing.ver(id), cantidad);
+    public Items findById(Long id) {
+    	System.out.println("aqui");
+	return new Items(clienteFeing.ver(id));
     }
 
 }

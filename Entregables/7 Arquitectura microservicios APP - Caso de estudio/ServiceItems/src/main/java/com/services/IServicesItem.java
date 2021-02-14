@@ -6,6 +6,7 @@
 
 package com.services;
 
+import com.models.Categoria;
 import com.models.Items;
 import java.util.List;
 
@@ -17,5 +18,5 @@ public interface IServicesItem {
 
     public List<Items> findAll();
     
-    public Items findById(Long id, Integer cantidad);
+    public Items findById(Long id);
 }

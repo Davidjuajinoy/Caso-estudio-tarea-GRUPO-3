@@ -15,6 +15,7 @@ public class Producto {
     private Long id;
     private String nombre;
     private Double precio;
+    private String categoria_fk;
 
     public Long getId() {
 	return id;
@@ -39,6 +40,16 @@ public class Producto {
     public void setPrecio(Double precio) {
 	this.precio = precio;
     }
+
+	public String getCategoria_fk() {
+		return categoria_fk;
+	}
+
+	public void setCategoria_fk(String categoria_fk) {
+		this.categoria_fk = categoria_fk;
+	}
+    
+    
     
     
 }

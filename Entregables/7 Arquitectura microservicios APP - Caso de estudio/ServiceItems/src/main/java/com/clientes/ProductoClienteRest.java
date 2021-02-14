@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface ProductoClienteRest {
 
 	@GetMapping("")
+	
 	public List<Producto> listar();
 	
 	@GetMapping("/{id}")

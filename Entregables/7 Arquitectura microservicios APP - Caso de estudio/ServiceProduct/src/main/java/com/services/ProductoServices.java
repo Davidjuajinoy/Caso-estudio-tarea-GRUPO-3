@@ -4,11 +4,10 @@
  * and open the template in the editor.
  */
 
-package com.implementacion;
+package com.services;
 
 import com.dao.IProductoDao;
 import com.entities.Producto;
-import com.services.IProductoServices;
 
 import java.util.List;
 import java.util.Optional;
@@ -35,6 +34,8 @@ public class ProductoServices implements IProductoServices {
     public Optional<Producto> findById(Long id) {
 	return productoDao.findById(id);
     }
+
+	
 
   
 }

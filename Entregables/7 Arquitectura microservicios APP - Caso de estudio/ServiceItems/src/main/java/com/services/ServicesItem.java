@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 
-package com.implementacion;
+package com.services;
 
+import com.models.Categoria;
 import com.models.Items;
 import com.models.Producto;
-import com.services.IServicesItem;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -28,15 +29,23 @@ public class ServicesItem implements IServicesItem {
     @Autowired
     private RestTemplate clienteRest;
     public List<Items> findAll() {
-	List<Producto> productos=Arrays.asList(clienteRest.getForObject("http://localhost:8084/api/productos", Producto[].class));
+    	System.out.println("Este **** no sirve por la url");
+    	/*
+    	 
+	List<Producto> productos=Arrays.asList(clienteRest.getForObject("http://localhost:53099/api/productos", Producto[].class));
 	return productos.stream().map(p -> new Items(p, 1)).collect(Collectors.toList());
+	*/
+		return null;
+    
     }
 
-    public Items findById(Long id, Integer cantidad) {
+    public Items findById(Long id) {
 	Map<String, String> pathVariables = new HashMap<String, String>();
 	pathVariables.put("id",id.toString());
-	Producto producto = clienteRest.getForObject("http://localhost:8084/api/productos/{id}", Producto.class, pathVariables);
-	return new Items(producto, cantidad);
+	Producto producto = clienteRest.getForObject("http://localhost:53099/api/productos/{id}", Producto.class, pathVariables);
+	String categoria_fk= producto.getCategoria_fk();
+	Categoria categoria = clienteRest.getForObject("http://localhost:52949/api/categoria/{categoria_fk}", Categoria.class,categoria_fk );
+	return new Items(producto, categoria);
     }
     
 }

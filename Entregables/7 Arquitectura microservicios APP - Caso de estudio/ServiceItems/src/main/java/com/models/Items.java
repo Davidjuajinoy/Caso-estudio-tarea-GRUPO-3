@@ -17,22 +17,32 @@ public class Items {
 
     private Producto producto;
     
-    private Integer cantidad;
+    private Categoria categoria;
 
     public Items() {
     }
 
-    public Items(Producto producto, Integer cantidad) {
+    public Items(Producto producto, Categoria categoria) {
 	this.producto = producto;
-	this.cantidad = cantidad;
+	this.categoria = categoria;
     }
     
-    public Items(Optional<Producto> ver, Integer cantidad)
+    public Items(Optional<Producto> producto) {
+    	this.producto = producto.get();
+    	
+    }
+    
+    /*public Items(Producto producto, Integer categoria) {
+    	this.producto = producto;
+    	this.categoria = categoria;
+    }
+    
+    public Items(Optional<Producto> ver, Integer categoria)
     {
 	this.producto= ver.get();
-	this.cantidad=cantidad;
+	this.categoria=categoria;
     }
-
+*/
     public Producto getProducto() {
 	return producto;
     }
@@ -41,18 +51,17 @@ public class Items {
 	this.producto = producto;
     }
 
-    public Integer getCantidad() {
-	return cantidad;
-    }
+	public Categoria getCategoria() {
+		return categoria;
+	}
 
-    public void setCantidad(Integer cantidad) {
-	this.cantidad = cantidad;
-    }
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+ 
     
-    public Double getTotal()
-    {
-	return producto.getPrecio()*cantidad.doubleValue();
-    }
+    
     
     
     

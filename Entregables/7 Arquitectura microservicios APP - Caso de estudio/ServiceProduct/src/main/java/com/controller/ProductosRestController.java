@@ -30,6 +30,8 @@ public class ProductosRestController {
 
     @GetMapping("")
     public List<Producto> listar() {
+    	System.out.println("Service Productos");
+    	System.out.println(" ");
 	return productoService.findAll();
     }
     
