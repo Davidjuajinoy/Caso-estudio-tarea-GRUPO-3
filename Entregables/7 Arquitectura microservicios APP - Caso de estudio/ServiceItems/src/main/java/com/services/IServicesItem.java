@@ -18,5 +18,5 @@ public interface IServicesItem {
 
     public List<Items> findAll();
     
-    public Items findById(Long id);
+    public List<Items> findById(Long id);
 }

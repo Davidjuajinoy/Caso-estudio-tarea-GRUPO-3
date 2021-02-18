@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author David Juajinoy
  */
 @RestController
-@RequestMapping("/api/item")
+@RequestMapping("/api/catalogo")
 public class ItemRestController {
 
     @Autowired
@@ -36,8 +36,8 @@ public class ItemRestController {
     	return servicesItem.findAll();
     }
 
-    @GetMapping("/{id}/categoria")
-    public Items detalle(@PathVariable Long id) {
+    @GetMapping("/categoria/{id}")
+    public List<Items> detalle(@PathVariable Long id) {
 	return servicesItem.findById(id);
     }
 

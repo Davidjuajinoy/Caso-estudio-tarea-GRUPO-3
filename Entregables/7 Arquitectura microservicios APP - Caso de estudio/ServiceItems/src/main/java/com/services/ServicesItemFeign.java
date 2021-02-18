@@ -32,9 +32,9 @@ public class ServicesItemFeign implements IServicesItem {
     	return null;
     }
 
-    public Items findById(Long id) {
-    	System.out.println("aqui");
-	return new Items(clienteFeing.ver(id));
+    public List<Items> findById(Long id) {
+    	System.out.println("aqui");	
+    	return null;
     }
 
 }

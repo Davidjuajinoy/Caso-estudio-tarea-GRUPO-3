@@ -18,31 +18,29 @@ public class Items {
     private Producto producto;
     
     private Categoria categoria;
-
+    
     public Items() {
     }
 
-    public Items(Producto producto, Categoria categoria) {
-	this.producto = producto;
+    public Items(Categoria categoria,Producto producto) {
 	this.categoria = categoria;
+	this.producto = producto;
     }
     
+    public Items(Producto producto) {
+    	
+    	this.producto = producto;
+        }
+    
+    public Items(Categoria categoria) {
+    	this.categoria = categoria;
+        }
+
     public Items(Optional<Producto> producto) {
     	this.producto = producto.get();
     	
     }
     
-    /*public Items(Producto producto, Integer categoria) {
-    	this.producto = producto;
-    	this.categoria = categoria;
-    }
-    
-    public Items(Optional<Producto> ver, Integer categoria)
-    {
-	this.producto= ver.get();
-	this.categoria=categoria;
-    }
-*/
     public Producto getProducto() {
 	return producto;
     }
@@ -51,13 +49,13 @@ public class Items {
 	this.producto = producto;
     }
 
-	public Categoria getCategoria() {
+	/*public Categoria getCategoria() {
 		return categoria;
 	}
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
-	}
+	}*/
 
  
     
