@@ -1,2 +1,5 @@
 Grupo 3:  Se debe realizar con dos esquemas diferentes (Producto y categorías) 
 - catalogo no tiene esquema y al realizar una solicitud del catalogo debe mostrar los productos de la categoría.
+
+
+ 
