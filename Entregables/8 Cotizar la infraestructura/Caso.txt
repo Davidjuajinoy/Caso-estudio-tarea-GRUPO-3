@@ -1,0 +1,3 @@
+Grupo 3:  Desarrollo: PHP, Base de datos: Oracle, Servidor web con 7500 peticiones simultáneas, 
+en el que cada petición tiene un consumo de 350 KB y, acceso a una base de datos donde 
+cada conexión consume 1000 KB, Almacenamiento de 300Gb. 
